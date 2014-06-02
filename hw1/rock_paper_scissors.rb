@@ -6,7 +6,7 @@ class RockPaperScissors
   def self.winner(player1, player2)
     # YOUR CODE HERE
     winner=player1.last + player2.last
-    raise RockPaperScissors::NoSuchStrategyError, 'Strategy must be one of R,P,S' if player2[1].match(/[^RPS]/)
+    raise RockPaperScissors::NoSuchStrategyError, 'Strategy must be one of R,P,S' if player2.last.match(/[^RPS]/)
     return player1 if winner=~(/((RS|SP|PR)|(RR|SS|PP))/)
     return player2
 
